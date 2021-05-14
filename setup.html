@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to connect Option Traders Log with Interactive Brokers</title>
+</head>
+<body>
+<style>
+    body {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    img {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    ol {
+        margin: 0;
+    }
+    li {
+        margin: 0;
+        padding-bottom: 20px;
+    }
+</style>
+    
+
+<h1>Create Flex Queries and Get Query ID</h1>
+
+<ol>
+    <li>
+        <p>Login to your Interactive Brokers account</p>
+        <img src="/images/1.png"/>
+    </li>
+
+    <li>
+        <p>Go to Reports > Flex Queries to create two queries</p>
+        <img src="/images/2.png"/>
+    </li>
+
+    <li>
+        <p>Click the Activity Flex Query’s plus button to create a new one, Make sure to select the Trades section data</p>
+        <img src="/images/3.png"/>
+
+        <img src="/images/4.png"/>
+    </li>
+
+    <li>
+        <p>Period select last 365 calendar days, The app will import all trades in this period you selected</p>
+        <img src="/images/5.png"/>
+        <p>Don’t change the Date Format, and Time Format, and Date/Time Separator or the app won’t work.</p>
+
+    </li>
+
+    <li>
+        <p>Go back to edit the query to see the Query ID that the app needed</p>
+        <img src="/images/6.png"/>
+        <p>and then</p>
+        <img src="/images/7.png"/>
+    </li>
+
+    <li>
+        <p>Input this to the All Trades Query ID field of the App settings</p>
+        <img src="/images/8.png"/>
+    </li>
+
+    <li>
+        <p>Create a new query with less period like Last 7 days with above step and input that Query ID to the New Trades Query ID field</p>
+    </li>
+</ol>
+
+
+<h1>Enable Flex Web Service to Get Access Token</h1>
+<ol>
+    <li>
+        <p>Go to Account Management by click the right top corner user icon</p>
+        <img src="/images/9.png"/>
+    </li>
+    <li>
+        <p>Scroll to the bottom and find Reporting section</p>
+        <img src="/images/10.png"/>
+    </li>
+    <li>
+        <p>If you don’t have token generated, Click Generate New Token to generate one, And Enable the Flex Web Service Status checkbox.</p>
+        <img src="/images/11.png"/>
+    </li>
+    <li>
+        <p>Copy the Current Token value to paste to the App Settings</p>
+        <img src="/images/12.png"/>
+    </li>
+    <li>
+        <p>Click the App right top refresh button to import trades</p>
+        <img src="/images/13.png"/>
+    </li>
+    <li>
+        <p>If the app shows error, Close the popup, and Refresh again, Util it’s successfully imported</p>
+        <img src="/images/14.png"/>
+    </li>
+</ol>
+
+</body>
+</html>
+
